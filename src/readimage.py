@@ -1,13 +1,9 @@
-import string
-
 import cv2
 import pytesseract
-import math
 import numpy as np
 
 
 def extract_data(img):
-
     line_data = []
 
     img_height = img.shape[0]
@@ -76,7 +72,6 @@ def extract_data(img):
 
 
 def img_threshold(img):
-
     img = cv2.pyrUp(img)
     img = cv2.medianBlur(img, 5)
 
