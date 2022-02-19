@@ -71,7 +71,7 @@ def extract_data(img):
     return img
 
 
-def img_threshold(img):
+def img_preparation(img):
     img = cv2.pyrUp(img)
     img = cv2.medianBlur(img, 5)
 
@@ -101,7 +101,7 @@ def main():
 
     img = cv2.imread(r".\..\target.png")
 
-    img = img_threshold(img)
+    img = img_preparation(img)
 
     img = extract_data(img)
 
