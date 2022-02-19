@@ -104,7 +104,7 @@ def img_threshold(img):
 def main():
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-    img = cv2.imread(r".\..\unknown.png")
+    img = cv2.imread(r".\..\target.png")
 
     img = img_threshold(img)
 
@@ -112,6 +112,7 @@ def main():
 
     cv2.imshow("Extracted box", img)
     cv2.waitKey(0)
+
 
 if __name__ == '__main__':
     main()
